@@ -39,12 +39,10 @@ export async function getStaticPaths() {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { params } = context;
-  console.log("params: ", params);
   const response = await fetch(
     `https://jsonplaceholder.typicode.com/posts/${params?.postId}`
   );
   const data = await response.json();
-  console.log("data: ", data);
   if (Object.keys(data).length === 0) {
     return {
       notFound: true,
