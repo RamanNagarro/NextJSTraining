@@ -1,5 +1,5 @@
 import { FC } from "react";
-import useDashboard from "@/hooks/dashboard";
+import useDashboard from "@/hooks/useDashboard";
 
 interface dashboardProps {
   followers: number;
